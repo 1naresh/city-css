@@ -1,0 +1,26 @@
+<h1>{{heading}}</h1>
+<div class="btns-group">
+    <div class="row">
+        <ul>
+            <li ng-repeat="cost in costs1">
+                <button type="button" ng-click="onSelect1(cost)">
+                    {{cost}}
+                </button>
+            </li>
+        </ul>
+    </div>
+    {{estCost1}}
+    <div class="row">
+        <ul>
+            <li ng-repeat="cost in costs2">
+                <button type="button" ng-click="onSelect2(cost)">
+                    {{cost}}
+                </button>
+            </li>
+        </ul>
+    </div>
+    {{estCost2}}
+</div>
+<button type="button" ng-click="toRegister()" class="button">next</button>
+<p ng-if="warning">please select</p>
+<button type="button" ng-click="back()" class="button">back</button>

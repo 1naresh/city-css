@@ -1,0 +1,23 @@
+<h3>i need following interior products</h3>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <div class="product col-md-6" ng-mouseover="over('kitchen')" ng-mouseleave="leave('kitchen')" id="kitchen">
+            <input type="checkbox" ng-model="kitchen" ng-checked="true">kitchen
+        </div>
+        <div class="product col-md-6" ng-mouseover="over('wardrobe')" ng-mouseleave="leave('wardrobe')" id="wardrobe">
+            <input type="checkbox" ng-model="wardrobe">wardrobe
+        </div>
+        <div class="product col-md-6" ng-mouseover="over('fulllInteriors')" ng-mouseleave="leave('fulllInteriors')" id="fulllInteriors">
+            <input type="checkbox" ng-model="fulllInteriors">fulllInteriorsImg
+        </div>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <div ng-if="kitchenImg"><img width="200px"  src="https://super.homelane.com/kitchen-grey-2.png"/></div>
+        <div ng-if="wardrobeImg"><img width="200px"  src="https://super.homelane.com/wardrobe-grey.png"/></div>
+        <div ng-if="fulllInteriorsImg"><img width="200px"  src="https://super.homelane.com/interiors-grey-2.png"/></div> 
+    </div>
+</div>
+<button type="button" ng-click="back()" class="button">back</button>
+<button type="button" ng-click="toShape()" class="button">next</button>
+
+ 

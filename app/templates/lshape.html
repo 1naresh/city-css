@@ -1,0 +1,14 @@
+<h3>{{heading}}</h3>
+<div class="center">
+<div class="slidecontainer">
+<input type="range" min="0" max="240" ng-model="wallA" class="slider">{{Math.floor(wallA/12)}}fts{{wallA%12}}inches <br>
+</div>
+<div class="slidecontainer">
+<input type="range" min="0" max="240" ng-model="wallB" class="slider">
+<p>{{Math.floor(wallB/12)}}fts{{wallB%12}}inches </p>
+<P ng-if="Math.floor(wallA/12)+Math.floor(wallB/12)<=5">{{(Math.floor(wallA/12)+Math.floor(wallB/12))*100}}</P>
+<P ng-if="Math.floor(wallA/12)+Math.floor(wallB/12)>5">{{500+((Math.floor(wallA/12)+Math.floor(wallB/12)-5)*200)}}</P>
+<p ng-if="warning">each must be greater than 1 or equal feet</p>
+</div>
+<button type="button" ng-click="toRegister()" class="button">next</button>
+</div>

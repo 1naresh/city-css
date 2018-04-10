@@ -1,0 +1,28 @@
+<h3>Last Step: Register and Generate Estimate</h3>
+ 
+<form ng-submit="submitForm()" name="userForm" class="form-group" novalidate>
+    <label>name:
+        <input type="text" class="form-control" ng-model="name">
+        <p ng-if="nameErr">name should be 6 to 15 letters</p>
+    </label><br>
+    <label>email:
+        <input type="text" class="form-control" ng-model="email">
+        <p ng-if="emailErr">enter  valid email</p>
+    </label><br>
+    <label>mobile number:
+        <input type="text" class="form-control" ng-model="phone" >
+        <p ng-if="phoneErr">phone number should be 8 to 15 digits</p>
+    </label><br>
+    <label>select city:
+        <select class="form-control" ng-model="city" >
+            <option ng-repeat="x in cities" value="{{x}}">{{x}}</option>
+        </select>
+        <p ng-if="cityErr">please select city</p>
+    </label><br>
+    <!--<p>{{userForm.$valid}}</p>-->
+    <button type="button" ng-click="back()" class="button">back</button>
+    <button type="submit" class="button">submit</button>
+</form> 
+ 
+ {{e}}
+ {{p}}

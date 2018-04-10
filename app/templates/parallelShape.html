@@ -1,0 +1,7 @@
+<h3>{{heading}}</h3>
+<input type="range" min="0" max="240" ng-model="wallA" class="wall">{{Math.floor(wallA/12)}}fts{{wallA%12}}inches <br>
+<input type="range" min="0" max="240" ng-model="wallB" class="wall">{{Math.floor(wallB/12)}}fts{{wallB%12}}inches<br>
+<P ng-if="Math.floor(wallA/12)+Math.floor(wallB/12)<=5">{{(Math.floor(wallA/12)+Math.floor(wallB/12))*100}}</P>
+<P ng-if="Math.floor(wallA/12)+Math.floor(wallB/12)>5">{{500+((Math.floor(wallA/12)+Math.floor(wallB/12)-5)*200)}}</P>
+<p ng-if="warning">each must be greater than 1 or equal feet</p>
+<button type="button" ng-click="toRegister()" class="btn">next</button>
